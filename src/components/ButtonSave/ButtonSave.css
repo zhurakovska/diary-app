@@ -1,0 +1,13 @@
+.button-save {
+  padding: 8px 20px;
+  background-color: rgb(92, 92, 198);
+  color: wheat;
+  font-size: 16px;
+  border-radius: 18px;
+  transition: transform 0.3s;
+}
+
+.button-save:hover {
+  transform: scale(1.1);
+  background-color: rgb(92, 92, 198);
+}
