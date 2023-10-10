@@ -1,5 +1,6 @@
 import "./App.css";
 import { ButtonSave } from "./components/ButtonSave/ButtonSave";
+import CardButton from "./components/CardButton/CardButton";
 import { JournalItem } from "./components/JournalItem/JournalItem";
 
 function App() {
@@ -22,13 +23,11 @@ function App() {
     <>
       <h1>Hello Nastya</h1>
       <ButtonSave />
+
       {data.map((item) => (
-        <JournalItem
-          key={item.id}
-          title={item.title}
-          text={item.text}
-          date={item.date}
-        />
+        <CardButton key={item.id}>
+          <JournalItem title={item.title} text={item.text} date={item.date} />
+        </CardButton>
       ))}
     </>
   );

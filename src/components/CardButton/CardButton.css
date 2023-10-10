@@ -1,0 +1,10 @@
+.card-button {
+  border-radius: 10px;
+  background: rgb(240, 182, 202);
+  color: cadetblue;
+  padding: 20px;
+}
+
+.card-button:hover {
+  background-color: rgb(228, 93, 140);
+}
