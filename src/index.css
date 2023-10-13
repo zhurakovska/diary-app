@@ -1,8 +1,8 @@
 @import-normalize;
 
 body {
-  font-family: sans-serif;
-  line-height: 1.5;
+  font-family: "Montserrat", sans-serif;
+  background-color: rgb(241, 207, 251);
 }
 
 h1,
