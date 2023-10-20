@@ -3,5 +3,5 @@ import CardButton from "../CardButton/CardButton";
 import "./JournalAddButton.css";
 
 export const JournalAddButton = () => {
-  return <CardButton>Новое воспомінаніе</CardButton>;
+  return <CardButton className="journal-add">New memory</CardButton>;
 };
