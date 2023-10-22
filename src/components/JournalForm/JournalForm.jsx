@@ -9,12 +9,20 @@ export const JournalForm = () => {
   const inputChange = (event) => {
     setInputData(event.target.value);
   };
+
+  const addJournalItem = (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const formProps = Object.fromEntries(formData);
+    console.log(formProps);
+  };
+
   return (
-    <form className="journal-form">
+    <form className="journal-form" onSubmit={addJournalItem}>
       <input type="text" name="title" />
       <input type="date" name="date" />
       <input type="text" name="tag" value={inputData} onChange={inputChange} />
-      <textarea name="" id="" cols="30" rows="10"></textarea>
+      <textarea name="post" id="" cols="30" rows="10"></textarea>
       <ButtonSave text="Save" />
     </form>
   );
