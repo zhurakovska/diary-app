@@ -23,7 +23,7 @@ export const JournalForm = () => {
       <input type="date" name="date" />
       <input type="text" name="tag" value={inputData} onChange={inputChange} />
       <textarea name="post" id="" cols="30" rows="10"></textarea>
-      <ButtonSave text="Save" />
+      <ButtonSave text="Save" onClick={() => console.log("нажаль")} />
     </form>
   );
 };
