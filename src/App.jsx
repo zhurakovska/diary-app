@@ -1,5 +1,6 @@
 import "./App.css";
 import { useState } from "react";
+import { Grid } from "./components/Grid/Grid";
 import { JournalAddButton } from "./components/JournalAddButton/JournalAddButton";
 import { Header } from "./components/Header/Header";
 import { JournalList } from "./components/JournalList/JournalList";
@@ -66,6 +67,7 @@ function App() {
       <Body>
         <JournalForm onSubmit={addItem} />
       </Body>
+      <Grid />
     </div>
   );
 }
