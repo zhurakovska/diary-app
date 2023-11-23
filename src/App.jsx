@@ -1,6 +1,5 @@
 import "./App.css";
 import { useState } from "react";
-import { Grid } from "./components/Grid/Grid";
 import { JournalAddButton } from "./components/JournalAddButton/JournalAddButton";
 import { Header } from "./components/Header/Header";
 import { JournalList } from "./components/JournalList/JournalList";
@@ -49,25 +48,29 @@ function App() {
   };
   return (
     <div className="app">
+      Helllo people
       <LefPanel>
         <Header />
         <JournalAddButton />
         <JournalList>
-          {items.sort(sortItems).map((item) => (
-            <CardButton key={item.id}>
-              <JournalItem
-                title={item.title}
-                text={item.text}
-                date={item.date}
-              />
-            </CardButton>
-          ))}
+          {items.length === 0 ? (
+            <p>You don't have notes! Please, write them</p>
+          ) : (
+            items.sort(sortItems).map((item) => (
+              <CardButton key={item.id}>
+                <JournalItem
+                  title={item.title}
+                  text={item.text}
+                  date={item.date}
+                />
+              </CardButton>
+            ))
+          )}
         </JournalList>
       </LefPanel>
       <Body>
         <JournalForm onSubmit={addItem} />
       </Body>
-      <Grid />
     </div>
   );
 }
